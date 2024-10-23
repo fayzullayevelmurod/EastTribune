@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "CopperGothCpsExp";
+  src: url("../fonts/a_CopperGothCpsExp/acoppergothcpsexp.eot"); /* IE9 */
+  src: url("../fonts/a_CopperGothCpsExp/acoppergothcpsexp.eot?#iefix") format("embedded-opentype"), url("../fonts/a_CopperGothCpsExp/acoppergothcpsexp.ttf") format("truetype"), url("../fonts/a_CopperGothCpsExp/acoppergothcpsexp.svg#CopperGothCpsExp") format("svg"); /* Legacy iOS */
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+span, label {
+  display: inline-block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-style: normal;
+}
+
+input, textarea {
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  outline: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+@media screen and (max-width: 1300pxpx) {
+  .container {
+    max-width: calc(100% - 112px);
+  }
+}
+
+.council h3 {
+  font-family: "CopperGothCpsExp";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.64px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    max-width: calc(100% - 112px);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: calc(100% - 144px);
+  }
+}
+@media only screen and (max-width: 993px) {
+  .container {
+    max-width: calc(100% - 64px);
+  }
+}
+@media only screen and (max-width: 993px) {
+  .container {
+    max-width: calc(100% - 32px);
+  }
+}/*# sourceMappingURL=style.css.map */
