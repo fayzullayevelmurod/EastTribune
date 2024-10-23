@@ -12,6 +12,12 @@
       max-width: 243px;
     }
   }
+
+  .publication_cards {
+    .services_card {
+      width: calc(100% / 2 - 16px);
+    }
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -188,6 +194,24 @@
       &_img {
         padding: 22px;
       }
+    }
+
+    .services_title {
+      .main_line {
+        display: none;
+      }
+
+      .main_title {
+        white-space: wrap;
+      }
+    }
+
+    .card_img {
+      padding-bottom: 140px;
+    }
+
+    .services_card {
+      width: 100%;
     }
 
     .publication_pagination {

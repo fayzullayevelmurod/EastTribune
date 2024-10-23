@@ -90,6 +90,7 @@ address {
   font-weight: 700;
   line-height: 18.64px;
   color: #181B21;
+  white-space: nowrap;
 }
 .main_block {
   display: flex;
@@ -259,6 +260,23 @@ address {
 .publication_cards_in {
   width: 100%;
 }
+.publication_cards .services_bottom p {
+  max-width: 620px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #393C41;
+  margin-bottom: 32px;
+}
+.publication_cards .services_bottom a {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #DF0101;
+}
 .publication_cards_title {
   margin-bottom: 24px;
 }
@@ -296,6 +314,22 @@ address {
 }
 .publication_cards .services_card_title svg {
   flex-shrink: 0;
+}
+.publication_cards .services_card_title .number {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: #F0F0F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.publication_cards .services_card_title .number span {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #181B21;
 }
 .publication_cards .services_card h6 {
   font-size: 16px;
@@ -465,6 +499,9 @@ address {
   .header_left {
     max-width: 243px;
   }
+  .publication_cards .services_card {
+    width: calc(50% - 16px);
+  }
 }
 @media only screen and (max-width: 1200px) {
   .container {
@@ -598,6 +635,18 @@ address {
   }
   .publication_cards .publication_card_img {
     padding: 22px;
+  }
+  .publication_cards .services_title .main_line {
+    display: none;
+  }
+  .publication_cards .services_title .main_title {
+    white-space: wrap;
+  }
+  .publication_cards .card_img {
+    padding-bottom: 140px;
+  }
+  .publication_cards .services_card {
+    width: 100%;
   }
   .publication_cards .publication_pagination a:nth-child(5) {
     display: none;
