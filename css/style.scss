@@ -210,6 +210,7 @@ address {
         border-radius: 8px;
 
         span {
+            min-width: 54px;
             white-space: nowrap;
             font-size: 14px;
             font-weight: 400;
@@ -367,6 +368,44 @@ address {
     }
 }
 // nav
+
+// council
+.council {
+    margin: 40px 0;
+
+    .main_title {
+        white-space: nowrap;
+    }
+
+    &_in {
+        margin-top: 24px;
+        display: flex;
+        gap: 16px 32px;
+        flex-wrap: wrap;
+    }
+
+    &_block {
+        width: calc(100% / 4 - 24px);
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        img {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $color-head;
+        }
+    }
+}
+// council
 
 // publication_cards
 .publication_cards {
@@ -544,6 +583,19 @@ address {
     }
 }
 // publication_cards
+
+// center_content
+.center_content {
+    .container {
+        display: flex;
+        gap: 32px;
+    }
+
+    &_in {
+        width: 100%;
+    }
+}
+// center_content
 
 // footer
 .footer {

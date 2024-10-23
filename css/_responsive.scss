@@ -12,12 +12,6 @@
       max-width: 243px;
     }
   }
-
-  .publication_cards {
-    .services_card {
-      width: calc(100% / 2 - 16px);
-    }
-  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -28,6 +22,12 @@
   .nav {
     &_link {
       gap: 15px;
+    }
+  }
+
+  .council {
+    &_block {
+      width: calc(100% / 3 - 22px);
     }
   }
 
@@ -80,6 +80,13 @@
         font-size: 12px;
         line-height: 18px;
       }
+    }
+  }
+
+  .council {
+    &_block {
+      gap: 24px;
+      width: calc(100% / 2 - 16px);
     }
   }
 
@@ -185,6 +192,37 @@
 
   .nav.active {
     display: block;
+  }
+
+  .council {
+
+    .container {
+      max-width: 100%;
+    }
+
+    &_in {
+      padding-left: 16px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 16px;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+    }
+    }
+
+    &_block {
+      gap: 12px;
+      min-width: 140px;
+      flex-direction: column;
+
+      h6 {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
   }
 
   .publication_cards {

@@ -124,6 +124,7 @@ address {
   border-radius: 8px;
 }
 .news_block ul span {
+  min-width: 54px;
   white-space: nowrap;
   font-size: 14px;
   font-weight: 400;
@@ -251,6 +252,37 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.council {
+  margin: 40px 0;
+}
+.council .main_title {
+  white-space: nowrap;
+}
+.council_in {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px 32px;
+  flex-wrap: wrap;
+}
+.council_block {
+  width: calc(25% - 24px);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.council_block img {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.council_block h6 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #181B21;
 }
 
 .publication_cards {
@@ -408,6 +440,14 @@ address {
   justify-content: center;
 }
 
+.center_content .container {
+  display: flex;
+  gap: 32px;
+}
+.center_content_in {
+  width: 100%;
+}
+
 .footer {
   margin-top: 64px;
   margin-bottom: 45px;
@@ -501,9 +541,6 @@ address {
   .header_left {
     max-width: 243px;
   }
-  .publication_cards .services_card {
-    width: calc(50% - 16px);
-  }
 }
 @media only screen and (max-width: 1200px) {
   .container {
@@ -511,6 +548,9 @@ address {
   }
   .nav_link {
     gap: 15px;
+  }
+  .council_block {
+    width: calc(33.3333333333% - 22px);
   }
   .publication_cards .publication_card {
     width: calc(50% - 16px);
@@ -547,6 +587,10 @@ address {
   .nav_link a {
     font-size: 12px;
     line-height: 18px;
+  }
+  .council_block {
+    gap: 24px;
+    width: calc(50% - 16px);
   }
   .footer {
     margin-bottom: 22px;
@@ -631,6 +675,29 @@ address {
   }
   .nav.active {
     display: block;
+  }
+  .council .container {
+    max-width: 100%;
+  }
+  .council_in {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: scroll;
+  }
+  .council_in::-webkit-scrollbar {
+    display: none;
+  }
+  .council_block {
+    gap: 12px;
+    min-width: 140px;
+    flex-direction: column;
+  }
+  .council_block h6 {
+    font-size: 14px;
+    line-height: 20px;
   }
   .publication_cards .publication_card {
     width: 100%;
