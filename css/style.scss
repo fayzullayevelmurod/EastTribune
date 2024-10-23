@@ -198,6 +198,10 @@ address {
 .nav {
     margin-top: 16px;
 
+    &_close {
+        display: none;
+    }
+
     &_link {
         padding: 8px;
         border-radius: 8px;
