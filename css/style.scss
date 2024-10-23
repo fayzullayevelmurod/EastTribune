@@ -27,6 +27,7 @@ $color-head: #181B21;
 $color-blue-dark: #134781;
 $color-primary: #393C41;
 $color-blue-light: #EFF2F9;
+$color-blue-header: #E3E8F4;
 // colors
 
 // fonts
@@ -129,15 +130,93 @@ address {
 
 // header
 .header {
+    margin-top: 30px;
+
     &_in {
         padding: 16px 24px;
         border-radius: 8px;
         background-image: url('../images/header_bg.png');
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+        align-items: center;
+        gap: 52px;
+    }
+
+    &_left {
+        max-width: 260px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+
+        .main_title {
+            font-size: 12px;
+            line-height: 14px;
+            text-transform: uppercase;
+        }
+
+        &_text {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        span {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 12px;
+            color: $color-head;
+        }
+    }
+
+    &_right {
+        max-width: 780px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: $color-primary;
+
+        }
+    }
+
+    &_btns {
+        display: none;
+        gap: 8px;
     }
 }
 // header
+
+// nav
+.nav {
+    margin-top: 16px;
+
+    &_link {
+        padding: 8px;
+        border-radius: 8px;
+        @include flex-full-center();
+        gap: 24px;
+        background-color: $color-blue-dark;
+
+        a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: white;
+        }
+
+        button {
+            @include flex-full-center();
+        }
+    }
+}
+// nav
 
 .main {
     &_title {
