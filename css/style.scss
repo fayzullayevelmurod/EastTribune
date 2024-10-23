@@ -127,6 +127,18 @@ address {
     }
 }
 
+// header
+.header {
+    &_in {
+        padding: 16px 24px;
+        border-radius: 8px;
+        background-image: url('../images/header_bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+// header
+
 .main {
     &_title {
         font-family: $font-CopperGothCpsExp;
