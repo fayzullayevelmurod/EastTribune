@@ -22,6 +22,13 @@
     font-style: normal;
 }
 
+// colors
+$color-head: #181B21;
+$color-blue-dark: #134781;
+$color-primary: #393C41;
+$color-blue-light: #EFF2F9;
+// colors
+
 // fonts
 $font-inter: "Inter", sans-serif;
 $font-CopperGothCpsExp: "CopperGothCpsExp";
@@ -85,7 +92,7 @@ html {
 }
 
 body {
-
+    font-family: $font-inter;
     font-style: normal;
 }
 
@@ -114,25 +121,132 @@ address {
 .container {
     max-width: 1312px;
     margin: 0 auto;
-    border: 1px solid red;
 
     @include media(1300px) {
         max-width: calc(100% - 112px);
     }
 }
 
-// council
-.council {
-    h3 {
+.main {
+    &_title {
         font-family: $font-CopperGothCpsExp;
         font-size: 16px;
         font-weight: 700;
         line-height: 18.64px;
-        text-align: left;
+        color: $color-head;
+    }
 
+    &_line {
+        height: 4px;
+        width: 100%;
+        background-color: $color-blue-dark;
+        border-radius: 4px;
     }
 }
+
 // council
+.council {
+
+}
+// council
+
+// footer
+.footer {
+    margin-top: 64px;
+    margin-bottom: 45px;
+
+    &_in {
+        border-radius: 0 0 8px 8px;
+        border-top: 4px solid $color-blue-dark;
+        background-color: $color-blue-light;
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        padding: 32px 24px 24px 24px;
+    }
+
+    &_left {
+        max-width: 284px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: $color-primary;
+        }
+    }
+
+    &_right {
+        display: flex;
+        align-items: start;
+        gap: 32px;
+        justify-content: space-between;
+    }
+
+    &_contact {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 283px;
+
+        a {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            color: $color-head;
+        }
+
+        .email {
+            display: none;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: $color-primary;
+        }
+
+        address {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            color: $color-primary;
+        }
+    }
+
+    &_links {
+        max-width: 585px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+
+        a {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            color: $color-head;
+        }
+    }
+
+    .main_title {
+        font-size: 14px;
+        line-height: 20px;
+
+        br {
+            display: none;
+        }
+
+        span {
+            font-family: $font-inter;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+    }
+}
+// footer
 
 
 
