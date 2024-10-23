@@ -58,6 +58,9 @@ $color-blue-light: #EFF2F9;
 $color-blue-header: #E3E8F4;
 $color-red: #DF0101;
 $color-border: #CDD4E5;
+$color-grey: #ECECEC;
+$color-support: #CCCCCC;
+
 // colors
 
 // fonts
@@ -390,11 +393,75 @@ address {
         margin-bottom: 32px;
     }
 
+    .services_cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 32px;
+    }
+
+    .services_card {
+        width: calc(100% / 3 - 22px);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border: 1px solid $color-support;
+        border-radius: 12px;
+        padding: 24px;
+        position: relative;
+
+        &_title {
+            @include flex-center();
+            gap: 16px;
+
+            svg {
+                flex-shrink: 0;
+            }
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $color-head;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $color-primary;
+        }
+
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .services_card_two {
+        width: calc(100% / 3 * 2 - 10px);
+    }
+
     .publication_card {
         width: calc(100% / 3 - 22px);
         display: flex;
         flex-direction: column;
         gap: 12px;
+
+        &_img {
+            border-radius: 8px;
+            background-color: $color-grey;
+            width: 100%;
+            padding: 12px;
+            @include flex-full-center();
+
+            img {
+                border-radius: 0 !important;
+                width: 110px;
+                height: 180px;
+            }
+        }
 
         img {
             border-radius: 8px;
@@ -405,6 +472,13 @@ address {
             font-weight: 600;
             line-height: 24px;
             color: $color-head;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $color-primary;
         }
     }
 

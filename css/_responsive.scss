@@ -184,6 +184,10 @@
   .publication_cards {
     .publication_card {
       width: calc(100%);
+
+      &_img {
+        padding: 22px;
+      }
     }
 
     .publication_pagination {
