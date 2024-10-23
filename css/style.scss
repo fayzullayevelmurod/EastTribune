@@ -22,6 +22,34 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'MTS Sans';
+    src: url('../fonts/MTSSansMedium/MTSSans-Medium.woff2') format('woff2'),
+        url('../fonts/MTSSansMedium/MTSSans-Medium.woff') format('woff'),
+        url('../fonts/MTSSansMedium/MTSSans-Medium.ttf') format('truetype');
+font-weight: 500;
+font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTS Sans';
+    src: url('../fonts/MTSSansRegular/MTSSans-Regular.woff2') format('woff2'),
+        url('../fonts/MTSSansRegular/MTSSans-Regular.woff') format('woff'),
+        url('../fonts/MTSSansRegular/MTSSans-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+    font-family: 'MTS Sans';
+    src: url('../fonts/MTSSansBold/MTSSans-Bold.woff2') format('woff2'),
+        url('../fonts/MTSSansBold/MTSSans-Bold.woff') format('woff'),
+        url('../fonts/MTSSansBold/MTSSans-Bold.ttf') format('truetype');
+font-weight: 700;
+font-style: normal;
+}
+
+
 // colors
 $color-head: #181B21;
 $color-blue-dark: #134781;
@@ -29,10 +57,12 @@ $color-primary: #393C41;
 $color-blue-light: #EFF2F9;
 $color-blue-header: #E3E8F4;
 $color-red: #DF0101;
+$color-border: #CDD4E5;
 // colors
 
 // fonts
 $font-inter: "Inter", sans-serif;
+$font-MTS-Sans: "MTS Sans", sans-serif;
 $font-CopperGothCpsExp: "CopperGothCpsExp";
 // fonts
 
@@ -128,6 +158,86 @@ address {
         max-width: calc(100% - 112px);
     }
 }
+
+.main {
+    &_title {
+        font-family: $font-CopperGothCpsExp;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18.64px;
+        color: $color-head;
+    }
+
+    &_block {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &_line {
+        height: 4px;
+        width: 100%;
+        background-color: $color-blue-dark;
+        border-radius: 4px;
+    }
+}
+
+// news_block
+.news_block {
+    max-width: 304px;
+
+    &_title {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+
+        .main_title {
+            white-space: nowrap;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background-color: $color-blue-light;
+        padding: 16px;
+        border-radius: 8px;
+
+        span {
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $color-blue-dark;
+        }
+
+        a {
+            display: flex;
+            gap: 16px;
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $color-head;
+        }
+    }
+
+    li {
+        border-bottom: 1px dashed $color-border;
+        padding-bottom: 16px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+
+}
+// news_block
 
 // header
 .header {
@@ -254,28 +364,68 @@ address {
 }
 // nav
 
-.main {
-    &_title {
-        font-family: $font-CopperGothCpsExp;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 18.64px;
-        color: $color-head;
-    }
+// publication_cards
+.publication_cards {
+    margin-top: 24px;
 
-    &_line {
-        height: 4px;
+    &_in {
         width: 100%;
-        background-color: $color-blue-dark;
-        border-radius: 4px;
+    }
+
+    &_title {
+        margin-bottom: 24px;
+    }
+
+    .container {
+        display: flex;
+        gap: 32px;
+        width: 100%;
+        align-items: start;
+    }
+
+    &_block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        margin-bottom: 32px;
+    }
+
+    .publication_card {
+        width: calc(100% / 3 - 22px);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        img {
+            border-radius: 8px;
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $color-head;
+        }
+    }
+
+    .publication_pagination {
+        @include flex-full-center();
+        gap: 4px;
+
+        a {
+            font-family: $font-MTS-Sans;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            color: black;
+            display: block;
+            width: 44px;
+            height: 44px;
+            @include flex-full-center();
+        }
     }
 }
-
-// council
-.council {
-
-}
-// council
+// publication_cards
 
 // footer
 .footer {

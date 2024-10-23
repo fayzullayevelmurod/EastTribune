@@ -25,6 +25,12 @@
     }
   }
 
+  .publication_cards {
+    .publication_card {
+      width: calc(100% / 2 - 16px);
+    }
+  }
+
   .footer {
     margin-bottom: 30px;
 
@@ -48,6 +54,10 @@
 @media only screen and (max-width: 993px) {
   .container {
     max-width: calc(100% - 64px);
+  }
+
+  .news_block {
+    display: none;
   }
 
   .header {
@@ -155,6 +165,11 @@
     &_link {
       padding: 40px 20px 20px 20px;
       flex-direction: column;
+      gap: 10px;
+
+      a {
+        font-size: 14px;
+      }
 
       button {
         display: none;
@@ -164,6 +179,23 @@
 
   .nav.active {
     display: block;
+  }
+
+  .publication_cards {
+    .publication_card {
+      width: calc(100%);
+    }
+
+    .publication_pagination {
+      a {
+        &:nth-child(5) {
+          display: none;
+        }
+        &:nth-child(6) {
+          display: none;
+        }
+      }
+    }
   }
 
   .footer {

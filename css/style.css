@@ -4,6 +4,24 @@
   src: url("../fonts/a_CopperGothCpsExp/acoppergothcpsexp.eot?#iefix") format("embedded-opentype"), url("../fonts/a_CopperGothCpsExp/acoppergothcpsexp.ttf") format("truetype"), url("../fonts/a_CopperGothCpsExp/acoppergothcpsexp.svg#CopperGothCpsExp") format("svg"); /* Legacy iOS */
   font-style: normal;
 }
+@font-face {
+  font-family: "MTS Sans";
+  src: url("../fonts/MTSSansMedium/MTSSans-Medium.woff2") format("woff2"), url("../fonts/MTSSansMedium/MTSSans-Medium.woff") format("woff"), url("../fonts/MTSSansMedium/MTSSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MTS Sans";
+  src: url("../fonts/MTSSansRegular/MTSSans-Regular.woff2") format("woff2"), url("../fonts/MTSSansRegular/MTSSans-Regular.woff") format("woff"), url("../fonts/MTSSansRegular/MTSSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MTS Sans";
+  src: url("../fonts/MTSSansBold/MTSSans-Bold.woff2") format("woff2"), url("../fonts/MTSSansBold/MTSSans-Bold.woff") format("woff"), url("../fonts/MTSSansBold/MTSSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -64,6 +82,70 @@ address {
   .container {
     max-width: calc(100% - 112px);
   }
+}
+
+.main_title {
+  font-family: "CopperGothCpsExp";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.64px;
+  color: #181B21;
+}
+.main_block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.main_line {
+  height: 4px;
+  width: 100%;
+  background-color: #134781;
+  border-radius: 4px;
+}
+
+.news_block {
+  max-width: 304px;
+}
+.news_block_title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.news_block_title .main_title {
+  white-space: nowrap;
+}
+.news_block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #EFF2F9;
+  padding: 16px;
+  border-radius: 8px;
+}
+.news_block ul span {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #134781;
+}
+.news_block ul a {
+  display: flex;
+  gap: 16px;
+}
+.news_block ul h6 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #181B21;
+}
+.news_block li {
+  border-bottom: 1px dashed #CDD4E5;
+  padding-bottom: 16px;
+}
+.news_block li:last-child {
+  border-bottom: none;
 }
 
 .header {
@@ -171,18 +253,60 @@ address {
   justify-content: center;
 }
 
-.main_title {
-  font-family: "CopperGothCpsExp";
+.publication_cards {
+  margin-top: 24px;
+}
+.publication_cards_in {
+  width: 100%;
+}
+.publication_cards_title {
+  margin-bottom: 24px;
+}
+.publication_cards .container {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  align-items: start;
+}
+.publication_cards_block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.publication_cards .publication_card {
+  width: calc(33.3333333333% - 22px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.publication_cards .publication_card img {
+  border-radius: 8px;
+}
+.publication_cards .publication_card h6 {
   font-size: 16px;
-  font-weight: 700;
-  line-height: 18.64px;
+  font-weight: 600;
+  line-height: 24px;
   color: #181B21;
 }
-.main_line {
-  height: 4px;
-  width: 100%;
-  background-color: #134781;
-  border-radius: 4px;
+.publication_cards .publication_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.publication_cards .publication_pagination a {
+  font-family: "MTS Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: black;
+  display: block;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {
@@ -286,6 +410,9 @@ address {
   .nav_link {
     gap: 15px;
   }
+  .publication_cards .publication_card {
+    width: calc(50% - 16px);
+  }
   .footer {
     margin-bottom: 30px;
   }
@@ -305,6 +432,9 @@ address {
 @media only screen and (max-width: 993px) {
   .container {
     max-width: calc(100% - 64px);
+  }
+  .news_block {
+    display: none;
   }
   .header_left {
     max-width: 230px;
@@ -389,12 +519,25 @@ address {
   .nav_link {
     padding: 40px 20px 20px 20px;
     flex-direction: column;
+    gap: 10px;
+  }
+  .nav_link a {
+    font-size: 14px;
   }
   .nav_link button {
     display: none;
   }
   .nav.active {
     display: block;
+  }
+  .publication_cards .publication_card {
+    width: 100%;
+  }
+  .publication_cards .publication_pagination a:nth-child(5) {
+    display: none;
+  }
+  .publication_cards .publication_pagination a:nth-child(6) {
+    display: none;
   }
   .footer {
     background-color: #EFF2F9;
