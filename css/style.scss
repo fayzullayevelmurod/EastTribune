@@ -170,7 +170,6 @@ address {
         font-weight: 700;
         line-height: 18.64px;
         color: $color-head;
-        white-space: nowrap;
     }
 
     &_block {
@@ -375,6 +374,12 @@ address {
 
     &_in {
         width: 100%;
+    }
+
+    .services_title {
+        .main_title {
+            white-space: nowrap;
+        }
     }
 
     .services_bottom {

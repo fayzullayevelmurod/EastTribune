@@ -90,7 +90,6 @@ address {
   font-weight: 700;
   line-height: 18.64px;
   color: #181B21;
-  white-space: nowrap;
 }
 .main_block {
   display: flex;
@@ -259,6 +258,9 @@ address {
 }
 .publication_cards_in {
   width: 100%;
+}
+.publication_cards .services_title .main_title {
+  white-space: nowrap;
 }
 .publication_cards .services_bottom p {
   max-width: 620px;
