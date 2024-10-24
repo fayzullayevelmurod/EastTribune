@@ -49,3 +49,34 @@ if (homeList.length) {
     })
   });
 }
+
+const historySwpRight = new Swiper('.history__swp_right .swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 8,
+  direction: 'horizontal',
+  loop: true,
+  mousewheel: false,
+  navigation: {
+    nextEl: '.history__swp_right .next-btn'
+  },
+  breakpoints: {
+    1300: {
+      slidesPerView: 4,
+      direction: 'vertical',
+      mousewheel: true,
+      spaceBetween: 16,
+    },
+    740: {
+      slidesPerView: 4
+    }
+  }
+});
+
+const historySwpLeft = new Swiper('.history__swp_left .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  effect: 'fade',
+  thumbs: {
+    swiper: historySwpRight,
+  },
+});

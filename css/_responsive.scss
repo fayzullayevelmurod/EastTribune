@@ -61,6 +61,41 @@
       }
     }
   }
+
+  .history {
+    &__swp {
+      flex-direction: column;
+      gap: 13px;
+
+      &_left {
+        width: 100%;
+      }
+
+      &_right {
+        width: 100%;
+
+        .swiper{
+          height: 64px;
+        }
+
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .library-card {
+    .main-img {
+      width: 350px;
+      height: 500px;
+      padding: 25px;
+    }
+
+    &__content {
+      width: calc(100% - 382px);
+    }
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -172,6 +207,52 @@
       img {
         height: 60px;
       }
+    }
+  }
+
+  .history {
+    .descriptions {
+      iframe {
+        width: 100%;
+      }
+
+      &_card {
+        flex-direction: column-reverse;
+
+        &__left, &__right {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .other-articles {
+    ul {
+      flex-wrap: wrap;
+
+      li {
+        width: calc(50% - 16px);
+      }
+    }
+  }
+
+  .library-card {
+    flex-direction: column;
+
+    .main-img {
+      width: 100%;
+      padding: 16px;
+      height: 224px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__content {
+      width: 100%;
     }
   }
 }
@@ -316,6 +397,20 @@
 
       img {
         height: 60px;
+      }
+    }
+  }
+
+  .publication_cards {
+    &_in {
+      width: 100%;
+    }
+  }
+
+  .other-library {
+    ul li {
+      &:nth-child(n+3) {
+        display: none !important;
       }
     }
   }
@@ -563,6 +658,73 @@
       width: calc(100% + 32px);
       margin-left: -16px;
       padding: 0 16px;
+    }
+  }
+
+  .history {
+    &__swp {
+      margin-bottom: 32px;
+
+      &_left {
+        .swiper {
+          &-slide {
+            height: 193px;
+          }
+        }
+      }
+
+      &_right {
+        .swiper {
+          overflow: visible;
+
+          &-slide {
+            width: 130px !important;
+          }
+        }
+      }
+    }
+
+    &__data {
+      li:first-child {
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .descriptions {
+      iframe {
+        height: 194px;
+      }
+
+      &_card {
+        a img {
+          height: 194px;
+        }
+      }
+    }
+  }
+
+  .other-articles {
+    ul {
+      li {
+        width: 100%;
+
+        &:nth-child(n+3) {
+          display: none;
+        }
+      }
+
+      img {
+        height: 193px;
+      }
+    }
+  }
+
+  .library-card {
+    a {
+      width: 100%;
     }
   }
 }
