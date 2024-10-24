@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- fonts -->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- css link -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- css link -->
@@ -132,7 +134,55 @@
         <!-- main -->
         <main>
             <!-- home -->
-            <section class="home"></section>
+            <section class="home">
+                <div class="container home__container">
+                    <div class="home__swp">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./images/home-card.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/home-card.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/home-card.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/home-card.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/home-card.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/home-card.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swp-pagination"></div>
+                    </div>
+                    <ul>
+                        <li class="active">
+                            <p>Запад в Азии: новые порции стратегии на старых дрожжах</p>
+                        </li>
+                        <li>
+                            <p>Активный заголовок <br> с иллюстрацией который показывается полностью</p>
+                        </li>
+                        <li>
+                            <p>Об активизации деятельности «Исламского государства в провинции Сахель»</p>
+                        </li>
+                        <li>
+                            <p>Африканское измерение турецкой политики в XXI веке</p>
+                        </li>
+                        <li>
+                            <p>Наследие Александра Невского в зеркале сегодняшнего дня</p>
+                        </li>
+                        <li>
+                            <p>Работы российских учёных по ливанской тематике. К 80-летнему юбилею установления дипломатических отношений с Ливанской Республикой</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <!-- home -->
 
             <!-- council -->
@@ -299,6 +349,36 @@
                                 </h6>
                                 </a>
                             </li>
+                            <li>
+                                <a href="#">
+                                <span>
+                                    27.06.24
+                                </span>
+                                <h6>
+                                    Наследие Александра Невского в зеркале сегодняшнего дня
+                                </h6>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <span>
+                                    27.06.24
+                                </span>
+                                <h6>
+                                    Наследие Александра Невского в зеркале сегодняшнего дня
+                                </h6>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <span>
+                                    27.06.24
+                                </span>
+                                <h6>
+                                    Наследие Александра Невского в зеркале сегодняшнего дня
+                                </h6>
+                                </a>
+                            </li>
                         </ul>
                     </aside>
                     <div class="center_content_in">
@@ -309,11 +389,307 @@
                                 </h3>
                                 <div class="main_line"></div>
                             </div>
+                            <div class="news_block__card">
+                                <a href="#">
+                                    <img src="./images/news-card-1.png" alt="">
+                                    <span>Научно-исследовательские проекты портала «Восточная трибуна»</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-2.png" alt="">
+                                    <span>Научно-исследовательские проекты портала «Восточная трибуна»</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-3.png" alt="">
+                                    <span>Научно-исследовательские проекты портала «Восточная трибуна»</span>
+                                </a>
+                            </div>
+                            <a href="#" class="more-btn">Все исследования</a>
+                        </div>
+                        <div class="center_content_block">
+                            <div class="news_block_title">
+                                <h3 class="main_title">
+                                    Переводы
+                                </h3>
+                                <div class="main_line"></div>
+                            </div>
+                            <div class="news_block__card">
+                                <a href="#">
+                                    <img src="./images/news-card-4.png" alt="">
+                                    <span>Об активизации деятельности террористов в Мали</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-5.png" alt="">
+                                    <span>О подходах в США к сотрудничеству со странами Африки</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-6.png" alt="">
+                                    <span>О взглядах в США на формирование нового мирового порядка (часть 2)</span>
+                                </a>
+                            </div>
+                            <a href="#" class="more-btn">Все исследования</a>
+                        </div>
+                        <div class="center_content_block">
+                            <div class="news_block_title">
+                                <h3 class="main_title">
+                                    Аналитика
+                                </h3>
+                                <div class="main_line"></div>
+                            </div>
+                            <div class="news_block__card">
+                                <a href="#">
+                                    <img src="./images/news-card-7.png" alt="">
+                                    <span>О статусе сил ВС Турции в Ливии</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-8.png" alt="">
+                                    <span>О росте напряженности на Африканском Роге</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-9.png" alt="">
+                                    <span>Об активизации деятельности «Исламского государства в провинции Сахель»</span>
+                                </a>
+                            </div>
+                            <a href="#" class="more-btn">Все аналитика</a>
+                        </div>
+                        <div class="center_content_block">
+                            <div class="news_block_title">
+                                <h3 class="main_title">
+                                    Мнения
+                                </h3>
+                                <div class="main_line"></div>
+                            </div>
+                            <div class="news_block__card">
+                                <a href="#">
+                                    <img src="./images/news-card-10.png" alt="">
+                                    <span>О взглядах в США на формирование нового мирового порядка (часть 2)</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-11.png" alt="">
+                                    <span>Наследие Александра Невского в зеркале сегодняшнего дня</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-12.png" alt="">
+                                    <span>Африканское измерение турецкой политики в XXI веке</span>
+                                </a>
+                            </div>
+                            <a href="#" class="more-btn">Все мнения</a>
+                        </div>
+                        <div class="center_content_block">
+                            <div class="news_block_title">
+                                <h3 class="main_title">
+                                    Новости портала
+                                </h3>
+                                <div class="main_line"></div>
+                            </div>
+                            <div class="news_block__card">
+                                <a href="#">
+                                    <img src="./images/news-card-13.png" alt="">
+                                    <span>Африканское измерение турецкой политики в XXI веке</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-14.png" alt="">
+                                    <span>Наследие Александра Невского в зеркале сегодняшнего дня</span>
+                                </a>
+                                <a href="#">
+                                    <img src="./images/news-card-15.png" alt="">
+                                    <span>О взглядах в США на формирование нового мирового порядка (часть 2)</span>
+                                </a>
+                            </div>
+                            <a href="#" class="more-btn">Все новости портала</a>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- center_content -->
+
+            <!-- Library -->
+            <section class="library">
+                <div class="container library__container">
+                    <div class="library__item">
+                        <div class="news_block_title">
+                            <h3 class="main_title">
+                                Библиотека
+                            </h3>
+                            <div class="main_line"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="main-img">
+                                        <img src="./images/book1.png" alt="">
+                                    </div>
+                                    <h6>
+                                        Самый богатый человек в Вавилоне — Клейсон Джордж Самюэль
+                                    </h6>
+                                    <p>
+                                        Эта книга — настоящее лекарство от нищеты. Если вы всерьез решили стать богатым, она поможет вам заглянуть в суть финансовых проблем и добиться реального успеха
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="main-img">
+                                        <img src="./images/book1.png" alt="">
+                                    </div>
+                                    <h6>
+                                        Критическое мышление — Том Чатфилд
+                                    </h6>
+                                    <p>
+                                        Критическое мышление — одна из ключевых компетенций человека будущего. Умение подвергать сомнению и анализу любую информацию это отличный способ защитить себя от обмана и манипуляций
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="main-img">
+                                        <img src="./images/book1.png" alt="">
+                                    </div>
+                                    <h6>
+                                        Критическое мышление — Том Чатфилд
+                                    </h6>
+                                    <p>
+                                        Критическое мышление — одна из ключевых компетенций человека будущего. Умение подвергать сомнению и анализу любую информацию это отличный способ защитить себя от обмана и манипуляций
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="main-img">
+                                        <img src="./images/book1.png" alt="">
+                                    </div>
+                                    <h6>
+                                        Левша — Лесков Николай Семенович
+                                    </h6>
+                                    <p>
+                                        Николай Семёнович Лесков — русский писатель, публицист, литературный критик
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="more-btn">Все книги</a>
+                    </div>
+                    <div class="library__item">
+                        <div class="news_block_title">
+                            <h3 class="main_title">
+                                Услуги
+                            </h3>
+                            <div class="main_line"></div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <h6>
+                                        Подготовка информационно-аналитических материалов
+                                    </h6>
+                                    <p>
+                                        Комплексная аналитика и разработка информационных материалов с учетом актуальных тенденций для обеспечения клиентов всей необходимой информацией для принятия стратегических решений
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h6>
+                                        Проведение международных форумов и конференций
+                                    </h6>
+                                    <p>
+                                        Организация и проведение высокоуровневых международных мероприятий, направленных на создание платформы для делового обмена и установления контактов между ключевыми игроками различных отраслей и регионов
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h6>
+                                        Разработка коммуникационных стратегий и медиа-кампаний
+                                    </h6>
+                                    <p>
+                                        Создание индивидуальных коммуникационных стратегий и реализация медиа-кампаний для укрепления бренда клиента, привлечения внимания к его деятельности и формирования позитивного имиджа
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h6>
+                                        Стратегический консалтинг по внешнеторговым взаимодействиям
+                                    </h6>
+                                    <p>
+                                        Экспертное сопровождение и консультирование по вопросам развития внешнеэкономических связей, включая анализ рынков сбыта, выявление потенциальных партнеров и разработку стратегий
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="more-btn">Все услуги</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Library end -->
+
+            <!-- Partners -->
+            <section class="partners">
+                <div class="container">
+                    <div class="news_block_title">
+                        <h3 class="main_title">
+                            Партнеры
+                        </h3>
+                        <div class="main_line"></div>
+                    </div>
+                    <div class="partners__list">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-1.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-2.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-3.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-4.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-5.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-6.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-7.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-8.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-9.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/partner-10.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Partners end -->
+
         </main>
         <!-- main -->
 
