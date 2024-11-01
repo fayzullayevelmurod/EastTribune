@@ -295,7 +295,8 @@ address {
     }
 
     &_left {
-        max-width: 260px;
+        width: 260px;
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -306,6 +307,7 @@ address {
             font-size: 12px;
             line-height: 14px;
             text-transform: uppercase;
+            color: #1E3459;
         }
 
         &_text {
@@ -367,7 +369,6 @@ address {
             position: relative;
 
             &::before {
-                display: none;
                 content: '';
                 position: absolute;
                 left: 0;
@@ -375,11 +376,13 @@ address {
                 height: 2px;
                 width: 100%;
                 background-color: $color-red;
+                opacity: 0;
+                transition: .3s ease-out all;
             }
 
             &:hover {
                 &::before {
-                    display: block;
+                    opacity: 1;
                 }
             }
         }
@@ -720,6 +723,8 @@ address {
     .main_title {
         font-size: 14px;
         line-height: 20px;
+        color: #1E3459;
+        font-weight: 700;
 
         br {
             display: none;
@@ -730,6 +735,7 @@ address {
             font-size: 14px;
             font-weight: 500;
             line-height: 20px;
+            color: #393C41;
         }
     }
 }
@@ -765,7 +771,7 @@ address {
         bottom: -26px;
         left: 0;
         width: 100%;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         gap: 8px;
@@ -1003,6 +1009,10 @@ address {
         display: flex;
         flex-direction: column;
         gap: 32px;
+
+        .text-gray {
+            color: #393C41;
+        }
 
         iframe {
             width: 660px;

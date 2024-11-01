@@ -9,7 +9,8 @@
     }
 
     &_left {
-      max-width: 243px;
+      width: 243px;
+      flex-shrink: 0;
     }
   }
 }
@@ -257,7 +258,7 @@
   }
 }
 
-@media only screen and (max-width: 993px) {
+@media only screen and (max-width: 1023px) {
   .container {
     max-width: calc(100% - 64px);
   }
@@ -276,7 +277,9 @@
 
   .header {
     &_left {
-      max-width: 230px;
+      width: 230px;
+      flex-shrink: 0;
+      max-width: auto;
     }
   }
 
@@ -331,6 +334,10 @@
       }
     }
 
+    .swp-pagination {
+      display: flex;
+    }
+
     ul {
       width: 100%;
       background: #EFF2F9;
@@ -376,6 +383,10 @@
   }
 
   .partners {
+    .news_block_title {
+      margin-bottom: 32px;
+    }
+
     &__list {
       overflow-y: scroll;
       width: calc(100% + 64px);
@@ -416,7 +427,7 @@
   }
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 767px) {
   .container {
     max-width: calc(100% - 32px);
   }
@@ -427,9 +438,9 @@
 
     &_in {
       justify-content: space-between;
-      align-items: start;
-      padding: 12px 0;
-      gap: 12px;
+      align-items: center;
+      padding: 16px 0;
+      gap: 11px;
       background-image: none;
     }
 
@@ -438,22 +449,23 @@
     }
 
     &_left {
-      align-items: start;
+      align-items: center;
       flex-direction: row;
-      gap: 12px;
+      gap: 11px;
       text-align: left;
-      max-width: 100%;
+      width: calc(100% - 50px);
 
       .main_title {
         font-size: 12px;
         line-height: 14px;
+        letter-spacing: -0.2px;
       }
     }
 
     &_logo {
       flex-shrink: 0;
-      max-width: 52px;
-      max-height: 52px;
+      width: 52px;
+      height: 52px;
     }
 
     &_right {
@@ -501,6 +513,7 @@
   }
 
   .council {
+    margin: 32px 0;
 
     .container {
       max-width: 100%;
@@ -514,9 +527,13 @@
       gap: 16px;
       overflow-x: scroll;
 
-      &::-webkit-scrollbar {
-        display: none;
+        &::-webkit-scrollbar {
+          display: none;
+      }
     }
+
+    .main_block {
+      padding: 0 16px;
     }
 
     &_block {
@@ -532,6 +549,7 @@
   }
 
   .publication_cards {
+    padding-bottom: 20px;
     .publication_card {
       width: calc(100%);
 
@@ -726,6 +744,10 @@
     a {
       width: 100%;
     }
+  }
+
+  .center_content_in {
+    gap: 32px;
   }
 }
 

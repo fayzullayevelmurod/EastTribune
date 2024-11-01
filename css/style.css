@@ -197,7 +197,8 @@ address {
   gap: 52px;
 }
 .header_left {
-  max-width: 260px;
+  width: 260px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,6 +209,7 @@ address {
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
+  color: #1E3459;
 }
 .header_left_text {
   display: flex;
@@ -260,7 +262,6 @@ address {
   position: relative;
 }
 .nav_link a::before {
-  display: none;
   content: "";
   position: absolute;
   left: 0;
@@ -268,9 +269,11 @@ address {
   height: 2px;
   width: 100%;
   background-color: #DF0101;
+  opacity: 0;
+  transition: 0.3s ease-out all;
 }
 .nav_link a:hover::before {
-  display: block;
+  opacity: 1;
 }
 .nav_link a.active::before {
   display: none;
@@ -560,6 +563,8 @@ address {
 .footer .main_title {
   font-size: 14px;
   line-height: 20px;
+  color: #1E3459;
+  font-weight: 700;
 }
 .footer .main_title br {
   display: none;
@@ -569,6 +574,7 @@ address {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
+  color: #393C41;
 }
 
 .home {
@@ -597,7 +603,7 @@ address {
   bottom: -26px;
   left: 0;
   width: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -795,6 +801,9 @@ address {
   flex-direction: column;
   gap: 32px;
 }
+.history .descriptions .text-gray {
+  color: #393C41;
+}
 .history .descriptions iframe {
   width: 660px;
   height: 372px;
@@ -927,7 +936,8 @@ address {
     gap: 32px;
   }
   .header_left {
-    max-width: 243px;
+    width: 243px;
+    flex-shrink: 0;
   }
 }
 @media only screen and (max-width: 1300px) {
@@ -1082,7 +1092,7 @@ address {
     width: 100%;
   }
 }
-@media only screen and (max-width: 993px) {
+@media only screen and (max-width: 1023px) {
   .container {
     max-width: calc(100% - 64px);
   }
@@ -1093,7 +1103,9 @@ address {
     height: 190px;
   }
   .header_left {
-    max-width: 230px;
+    width: 230px;
+    flex-shrink: 0;
+    max-width: auto;
   }
   .nav_link {
     gap: 9px;
@@ -1129,6 +1141,9 @@ address {
   .home__swp .swiper-slide {
     height: 398px;
   }
+  .home .swp-pagination {
+    display: flex;
+  }
   .home ul {
     width: 100%;
     background: #EFF2F9;
@@ -1161,6 +1176,9 @@ address {
   .library__item .main-img {
     height: 220px;
   }
+  .partners .news_block_title {
+    margin-bottom: 32px;
+  }
   .partners__list {
     overflow-y: scroll;
     width: calc(100% + 64px);
@@ -1187,7 +1205,7 @@ address {
     display: none !important;
   }
 }
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 767px) {
   .container {
     max-width: calc(100% - 32px);
   }
@@ -1197,29 +1215,30 @@ address {
   }
   .header_in {
     justify-content: space-between;
-    align-items: start;
-    padding: 12px 0;
-    gap: 12px;
+    align-items: center;
+    padding: 16px 0;
+    gap: 11px;
     background-image: none;
   }
   .header_btns {
     display: flex;
   }
   .header_left {
-    align-items: start;
+    align-items: center;
     flex-direction: row;
-    gap: 12px;
+    gap: 11px;
     text-align: left;
-    max-width: 100%;
+    width: calc(100% - 50px);
   }
   .header_left .main_title {
     font-size: 12px;
     line-height: 14px;
+    letter-spacing: -0.2px;
   }
   .header_logo {
     flex-shrink: 0;
-    max-width: 52px;
-    max-height: 52px;
+    width: 52px;
+    height: 52px;
   }
   .header_right {
     display: none;
@@ -1257,6 +1276,9 @@ address {
   .nav.active {
     display: block;
   }
+  .council {
+    margin: 32px 0;
+  }
   .council .container {
     max-width: 100%;
   }
@@ -1271,6 +1293,9 @@ address {
   .council_in::-webkit-scrollbar {
     display: none;
   }
+  .council .main_block {
+    padding: 0 16px;
+  }
   .council_block {
     gap: 12px;
     min-width: 140px;
@@ -1279,6 +1304,9 @@ address {
   .council_block h6 {
     font-size: 14px;
     line-height: 20px;
+  }
+  .publication_cards {
+    padding-bottom: 20px;
   }
   .publication_cards .publication_card {
     width: 100%;
@@ -1396,5 +1424,8 @@ address {
   }
   .library-card a {
     width: 100%;
+  }
+  .center_content_in {
+    gap: 32px;
   }
 }/*# sourceMappingURL=style.css.map */
