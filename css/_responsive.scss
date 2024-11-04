@@ -482,34 +482,143 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $color-blue-dark;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
 
     &_close {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 20px;
-      height: 20px;
+      width: 75px;
+      height: 3px;
       display: block;
+      background: #A0A0A0;
+      top: 14px;
+      border-radius: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: 100%;
+      background: #F2F3F7;
+      border-radius: 16px 16px 0 0;
     }
 
     &_link {
-      padding: 40px 20px 20px 20px;
+      padding: 41px 0 24px;
       flex-direction: column;
       gap: 10px;
+      background: transparent;
+      width: 295px;
+      margin: 0 auto;
 
       a {
         font-size: 14px;
+        color: #181B21;
       }
 
       button {
         display: none;
       }
-    }
-  }
 
-  .nav.active {
-    display: block;
+      li {
+        display: block !important;
+        order: 3;
+
+        &.search_inp {
+          order: 1;
+          display: flex !important;
+          align-items: center;
+          gap: 8px;
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        &.search_btn {
+          display: none !important;
+        }
+      }
+    }
+
+    &.active {
+      display: block;
+
+      @keyframes navBeforeActive {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes navActive {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      
+      &::before {
+        animation: navBeforeActive 0.2s linear 1;
+      }
+
+      .container {
+        animation: navActive 0.2s linear 1;
+      }
+    }
+
+    &.end-active {
+      display: block;
+      
+      @keyframes navBeforeEndActive {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      @keyframes navEndActive {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(100%);
+        }
+      }
+
+      &::before {
+        opacity: 0;
+        animation: navBeforeEndActive 0.2s linear 1;
+      }
+
+      .container {
+        opacity: 0;
+        animation: navEndActive 0.2s linear 1;
+      }
+    }
   }
 
   .council {

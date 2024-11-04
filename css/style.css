@@ -285,10 +285,42 @@ address {
   width: 100%;
   background-color: #DF0101;
 }
+.nav_link .search_inp {
+  display: none;
+  width: 100%;
+}
+.nav_link .search_inp input {
+  background: white;
+  width: 100%;
+  height: 26px;
+  border-radius: 4px;
+  padding: 0 16px;
+  font-size: 12px;
+  border: 1px solid #9498A1;
+}
+.nav_link .search_inp input::-moz-placeholder {
+  color: #9498A1;
+}
+.nav_link .search_inp input::placeholder {
+  color: #9498A1;
+}
+.nav_link .search_inp button {
+  display: none;
+  flex-shrink: 0;
+}
 .nav_link button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.nav_link.active {
+  padding: 5px 24px;
+}
+.nav_link.active .nav_item:not(.search_inp):not(.search_btn) {
+  display: none;
+}
+.nav_link.active .search_inp {
+  display: block;
 }
 
 .council {
@@ -764,12 +796,20 @@ address {
 }
 .history__swp_right button {
   position: absolute;
-  bottom: 0;
   left: 0;
   width: 100%;
   height: 26px;
   background: rgba(255, 255, 255, 0.8);
   z-index: 2;
+}
+.history__swp_right .prev-btn {
+  top: 0;
+}
+.history__swp_right .prev-btn svg {
+  transform: rotateZ(180deg);
+}
+.history__swp_right .next-btn {
+  bottom: 0;
 }
 .history p {
   font-size: 16px;
@@ -1252,29 +1292,123 @@ address {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #134781;
+  }
+  .nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
   }
   .nav_close {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
+    width: 75px;
+    height: 3px;
     display: block;
+    background: #A0A0A0;
+    top: 14px;
+    border-radius: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav .container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background: #F2F3F7;
+    border-radius: 16px 16px 0 0;
   }
   .nav_link {
-    padding: 40px 20px 20px 20px;
+    padding: 41px 0 24px;
     flex-direction: column;
     gap: 10px;
+    background: transparent;
+    width: 295px;
+    margin: 0 auto;
   }
   .nav_link a {
     font-size: 14px;
+    color: #181B21;
   }
   .nav_link button {
     display: none;
   }
+  .nav_link li {
+    display: block !important;
+    order: 3;
+  }
+  .nav_link li.search_inp {
+    order: 1;
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav_link li.search_inp button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav_link li.search_btn {
+    display: none !important;
+  }
   .nav.active {
     display: block;
+  }
+  @keyframes navBeforeActive {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes navActive {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  .nav.active::before {
+    animation: navBeforeActive 0.2s linear 1;
+  }
+  .nav.active .container {
+    animation: navActive 0.2s linear 1;
+  }
+  .nav.end-active {
+    display: block;
+  }
+  @keyframes navBeforeEndActive {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @keyframes navEndActive {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(100%);
+    }
+  }
+  .nav.end-active::before {
+    opacity: 0;
+    animation: navBeforeEndActive 0.2s linear 1;
+  }
+  .nav.end-active .container {
+    opacity: 0;
+    animation: navEndActive 0.2s linear 1;
   }
   .council {
     margin: 32px 0;

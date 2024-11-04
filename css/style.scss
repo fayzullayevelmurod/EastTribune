@@ -400,8 +400,43 @@ address {
             }
         }
 
+        .search_inp {
+            display: none;
+            width: 100%;
+
+            input {
+                background: white;
+                width: 100%;
+                height: 26px;
+                border-radius: 4px;
+                padding: 0 16px;
+                font-size: 12px;
+                border: 1px solid #9498A1;
+
+                &::placeholder {
+                    color: #9498A1;
+                }
+            }
+
+            button {
+                display: none;
+                flex-shrink: 0
+            }
+        }
+
         button {
             @include flex-full-center();
+        }
+
+        &.active {
+            padding: 5px 24px;
+            .nav_item:not(.search_inp):not(.search_btn) {
+                display: none;
+            }
+
+            .search_inp {
+                display: block;
+            }
         }
     }
 }
@@ -965,12 +1000,23 @@ address {
 
             button {
                 position: absolute;
-                bottom: 0;
                 left: 0;
                 width: 100%;
                 height: 26px;
                 background: rgba(255, 255, 255, 0.8);
                 z-index: 2;
+            }
+
+            .prev-btn {
+                top: 0;
+
+                svg {
+                    transform: rotateZ(180deg);
+                }
+            }
+
+            .next-btn {
+                bottom: 0;
             }
         }
     }
