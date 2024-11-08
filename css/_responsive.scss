@@ -166,7 +166,7 @@
 
     ul {
       width: 228px;
-      
+
       li {
         font-size: 14px;
         line-height: 20px;
@@ -459,6 +459,7 @@
         font-size: 12px;
         line-height: 14px;
         letter-spacing: -0.2px;
+        white-space: wrap;
       }
     }
 
@@ -519,13 +520,13 @@
     &_link {
       padding: 41px 0 24px;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
       background: transparent;
       width: 295px;
       margin: 0 auto;
 
       a {
-        font-size: 14px;
+        font-size: 16px;
         color: #181B21;
       }
 
@@ -542,6 +543,11 @@
           display: flex !important;
           align-items: center;
           gap: 8px;
+
+          input {
+            height: 44px;
+            font-size: 14px;
+          }
 
           button {
             display: flex;
@@ -576,7 +582,7 @@
           transform: translateY(0);
         }
       }
-      
+
       &::before {
         animation: navBeforeActive 0.2s linear 1;
       }
@@ -588,7 +594,7 @@
 
     &.end-active {
       display: block;
-      
+
       @keyframes navBeforeEndActive {
         from {
           opacity: 1;

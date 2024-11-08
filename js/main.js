@@ -80,7 +80,7 @@ const historySwpRight = new Swiper('.history__swp_right .swiper', {
   slidesPerView: 'auto',
   spaceBetween: 8,
   direction: 'horizontal',
-  loop: true,
+  // loop: true,
   mousewheel: false,
   navigation: {
     nextEl: '.history__swp_right .next-btn',
