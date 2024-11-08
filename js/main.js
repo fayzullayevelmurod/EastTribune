@@ -10,6 +10,7 @@ let burger_btn = document.querySelector('.burger_btn');
 let search_btn = document.querySelector('.header_btns, .search-icon');
 let nav_close = document.querySelector('.nav_close');
 let nav = document.querySelector('.nav');
+let nav_bg = document.querySelector('.nav_bg');
 let searchBtn = document.querySelector('.search_btn button');
 let navLink = document.querySelector('.nav .nav_link');
 
@@ -19,16 +20,29 @@ searchBtn.onclick = () => {
 
 burger_btn.addEventListener('click', () => {
   nav.classList.add('active');
+  nav_bg.classList.add('active');
   bodyHidden();
 })
 
 search_btn.addEventListener('click', () => {
   nav.classList.add('active');
+  nav_bg.classList.add('active');
   bodyHidden();
 })
 
 nav_close.addEventListener('click', () => {
   nav.classList.remove('active');
+  nav_bg.classList.remove('active');
+  nav.classList.add('end-active');
+  setTimeout(() => {
+    nav.classList.remove('end-active');
+    bodyVisible();
+  }, 400);
+})
+
+nav_bg.addEventListener('click', () => {
+  nav.classList.remove('active');
+  nav_bg.classList.remove('active');
   nav.classList.add('end-active');
   setTimeout(() => {
     nav.classList.remove('end-active');
