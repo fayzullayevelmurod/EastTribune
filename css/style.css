@@ -1462,6 +1462,7 @@ address {
   .council_block {
     gap: 12px;
     min-width: 140px;
+    align-items: start;
     flex-direction: column;
   }
   .council_block h6 {
