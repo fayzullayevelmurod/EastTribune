@@ -50,6 +50,21 @@ nav_bg.addEventListener('click', () => {
   }, 400);
 })
 
+
+document.addEventListener('click', event => {
+  if (
+    !burger_btn.contains(event.target) &&
+    !search_btn.contains(event.target) &&
+    !nav.contains(event.target)
+  ) {
+    console.log(!search_btn.contains(event.target));
+    nav.classList.remove('active');
+    nav_bg.classList.remove('active');
+    navLink.classList.remove('active')
+    bodyVisible();
+  }
+})
+
 let homeSwp = new Swiper('.home .swiper', {
   slidesPerView: 1,
   spaceBetween: 0,
